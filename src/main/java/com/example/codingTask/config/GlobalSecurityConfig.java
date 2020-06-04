@@ -40,7 +40,7 @@ public class GlobalSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .httpBasic();
 
-        http.csrf().disable();
+        http.csrf().ignoringAntMatchers("/record/delete/*", "/file/uploadfile");
    }
 
     @Bean
