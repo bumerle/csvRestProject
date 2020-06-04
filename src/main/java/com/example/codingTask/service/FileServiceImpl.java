@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory;
  */
 
 @Component
-public class FileServiceImp implements FileService {
+public class FileServiceImpl implements FileService {
 
     @Autowired
     private FileProcessor fileProcessor;
@@ -25,14 +25,17 @@ public class FileServiceImp implements FileService {
     @Autowired
     private LineRecordRepository repository;
 
-    Logger logger = LoggerFactory.getLogger(FileServiceImp.class);
+    Logger logger = LoggerFactory.getLogger(FileServiceImpl.class);
 
     @Override
     public void processFile(MultipartFile file) {
         logger.debug("File service processing");
 
         List<LineRecord> records = fileProcessor.processFile(file);
+
         logger.debug("File service saving");
-        repository.saveAll(records);
+        if (records != null && !records.isEmpty()) {
+            repository.saveAll(records);
+        }
     }
 }

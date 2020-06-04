@@ -16,12 +16,12 @@ import org.slf4j.LoggerFactory;
  */
 
 @Component
-public class RecordServiceImp implements RecordService {
+public class RecordServiceImpl implements RecordService {
 
     @Autowired
     private LineRecordRepository repository;
 
-    Logger logger = LoggerFactory.getLogger(RecordServiceImp.class);
+    Logger logger = LoggerFactory.getLogger(RecordServiceImpl.class);
 
     @Override
     public LineRecord obtainRecord(String id) {

@@ -1,7 +1,5 @@
 package com.example.codingTask.entity;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
@@ -10,8 +8,11 @@ import javax.validation.constraints.NotNull;
 
 
 import com.opencsv.bean.CsvBindByName;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 /**
@@ -20,8 +21,11 @@ import lombok.ToString;
 
 @Entity
 @Getter
-@Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@EqualsAndHashCode
 public class LineRecord {
 
     @Id

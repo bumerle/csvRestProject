@@ -1,0 +1,9 @@
+PRIMARY_KEY,NAME,DESCRIPTION,UPDATED_TIMESTAMP
+1,John Doe,Blond,some_TS_1
+2,Doe,Dark,some_TS_2
+3,Mary,Blond,some_TS_3
+4,Jane,Dark,some_TS_4
+5,Clark,Blond,some_TS_5
+6,Peter,Dark,some_TS_6
+7,Bart,Blond,some_TS_7
+8,Antoni,Dark,some_TS_8
